@@ -12,6 +12,8 @@
         [javax.servlet/servlet-api "2.5"]
         [ring/ring-devel "1.3.0"]
         [ring/ring-core "1.3.0"]
+        [ring-cors "0.1.0"]
+        [riemann "0.2.6"]
     ]
     :main ^:skip-aot influxdb-proxy.core
     :target-path "target/%s"
