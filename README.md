@@ -1,36 +1,17 @@
 # influxdb-proxy
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+Utility for visualizing the effect of Riemann's `ewma-timelss` stream on a time
+series that already exists in InfluxDB.
 
 ## Usage
 
-FIXME: explanation
+Modify `src/influxdb_proxy/core.clj` to point to your influxdb server.  Download
+Grafana and point it to `localhost:8080/db/<db_name>`, where `db_name` is an
+existing database on your InfluxDB server.
 
-    $ java -jar influxdb-proxy-0.1.0-standalone.jar [args]
+Then:
 
-## Options
+    lein run
 
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Open up Grafana and graph yourself some metrics.  Adjust the `halflife` argument
+to `ewma-timeless` to see the effect of different values on the moving average.

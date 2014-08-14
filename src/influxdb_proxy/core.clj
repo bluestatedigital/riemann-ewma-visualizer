@@ -90,7 +90,7 @@
         precision (:time_precision (:params req) "s")
         
         client (influx/make-client {
-            :host "influxdb.docker.bsdinternal.com"
+            :host "influxdb.example.com"
             :port 80
             :username user
             :password pass
